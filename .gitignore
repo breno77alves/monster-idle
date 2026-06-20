@@ -1,0 +1,45 @@
+# Dependencies and build output
+node_modules/
+dist/
+dist-ssr/
+.vite/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Environment and local-only files
+.env
+.env.*
+!.env.example
+
+# Test artifacts
+coverage/
+playwright-report/
+test-results/
+
+# Editor and operating system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Temporary prototype art (third-party, not licensed for distribution)
+/AdventureCards/
+/Background/
+/Eggs/
+/Items/
+/Normal/
+/Pokeball/
+/Shiny/
+/UI/
