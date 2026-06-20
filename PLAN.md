@@ -367,3 +367,4 @@ Antes de instalar qualquer pacote novo:
 | dexie            | latest | Abstração de IndexedDB tipada         |
 | vitest           | latest | Testes unitários rápidos com Vite     |
 | @playwright/test | latest | Testes E2E e de interface             |
+| prettier         | latest | Formatação consistente do código      |
