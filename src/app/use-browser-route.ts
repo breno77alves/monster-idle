@@ -21,5 +21,5 @@ export function navigate(to: AppRoutePath): void {
 
   window.history.pushState({}, '', to)
   window.dispatchEvent(new PopStateEvent('popstate'))
-  window.scrollTo({ top: 0, behavior: 'smooth' })
+  window.scrollTo({ top: 0 })
 }

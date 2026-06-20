@@ -25,28 +25,31 @@ interface NavigationLinkProps {
   route: (typeof appRoutes)[number]
 }
 
-function NavigationLink({ active, route }: NavigationLinkProps) {
-  function handleClick(event: MouseEvent<HTMLAnchorElement>) {
-    if (
-      event.button !== 0 ||
-      event.metaKey ||
-      event.ctrlKey ||
-      event.shiftKey ||
-      event.altKey
-    ) {
-      return
-    }
-
-    event.preventDefault()
-    navigate(route.path)
+function followInternalLink(
+  event: MouseEvent<HTMLAnchorElement>,
+  to: AppRoutePath,
+) {
+  if (
+    event.button !== 0 ||
+    event.metaKey ||
+    event.ctrlKey ||
+    event.shiftKey ||
+    event.altKey
+  ) {
+    return
   }
 
+  event.preventDefault()
+  navigate(to)
+}
+
+function NavigationLink({ active, route }: NavigationLinkProps) {
   return (
     <a
       aria-current={active ? 'page' : undefined}
       className="nav-link"
       href={route.path}
-      onClick={handleClick}
+      onClick={(event) => followInternalLink(event, route.path)}
     >
       <AppIcon name={route.icon} />
       <span>{route.label}</span>
@@ -64,10 +67,7 @@ export function App() {
         <a
           className="brand"
           href="/"
-          onClick={(event) => {
-            event.preventDefault()
-            navigate('/')
-          }}
+          onClick={(event) => followInternalLink(event, '/')}
         >
           <span className="brand-mark" aria-hidden="true">
             MI

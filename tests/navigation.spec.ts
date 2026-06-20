@@ -39,3 +39,18 @@ test('supports direct navigation and browser history', async ({ page }) => {
     page.getByRole('heading', { level: 1, name: 'Seu time' }),
   ).toBeVisible()
 })
+
+test('keeps primary navigation keyboard focusable', async ({ page }) => {
+  await page.goto('/')
+
+  const homeLink = page.getByRole('link', { name: 'Início', exact: true })
+  const collectionLink = page.getByRole('link', {
+    name: 'Coleção',
+    exact: true,
+  })
+
+  await homeLink.focus()
+  await expect(homeLink).toBeFocused()
+  await page.keyboard.press('Tab')
+  await expect(collectionLink).toBeFocused()
+})
