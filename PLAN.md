@@ -148,17 +148,17 @@ npx playwright test  # navegação entre telas funciona
 
 ### Tarefas
 
-- [ ] Definir e exportar interfaces TypeScript:
+- [x] Definir e exportar interfaces TypeScript:
   - `MonsterSpecies`
   - `OwnedMonster`
   - `MonsterAbility`
   - `MonsterTeam`
   - `MonsterType`
   - `MonsterRole`
-- [ ] Criar schemas Zod para cada interface
-- [ ] Criar 6 espécies em `src/game-data/monsters/` (com stats placeholder)
-- [ ] Criar testes unitários para todos os schemas (casos válidos e inválidos)
-- [ ] Exibir lista de monstros na tela de Coleção (visual simples)
+- [x] Criar schemas Zod para cada interface
+- [x] Criar 6 espécies em `src/game-data/monsters/` (com stats placeholder)
+- [x] Criar testes unitários para todos os schemas (casos válidos e inválidos)
+- [x] Exibir lista de monstros na tela de Coleção (visual simples)
 
 ### NÃO fazer neste milestone
 
