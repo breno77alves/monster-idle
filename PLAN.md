@@ -197,7 +197,7 @@ npm run typecheck  # zero erros de tipo
 
 ### Tarefas
 
-- [ ] Implementar `src/simulation/battle/`:
+- [x] Implementar `src/simulation/battle/`:
   - Ordenação por speed
   - Cálculo de dano: `Math.max(1, attack * power - defense * 0.5)`
   - Aplicação de habilidades (dano, buff, debuff)
@@ -206,7 +206,7 @@ npm run typecheck  # zero erros de tipo
   - Battle log (array de strings por rodada)
   - Limite de 100 rodadas
   - Seed determinística (LCG simples ou similar)
-- [ ] Testes unitários para:
+- [x] Testes unitários para:
   - Batalha normal (time A vence)
   - Batalha normal (time B vence)
   - Time com apenas 1 monstro

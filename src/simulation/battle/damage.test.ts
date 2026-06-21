@@ -13,4 +13,10 @@ describe('calculateDamage', () => {
   it('always deals at least one damage', () => {
     expect(calculateDamage({ attack: 1, power: 0, defense: 999 })).toBe(1)
   })
+
+  it('never returns NaN for non-finite combat values', () => {
+    expect(calculateDamage({ attack: Number.NaN, power: 1, defense: 0 })).toBe(
+      1,
+    )
+  })
 })
