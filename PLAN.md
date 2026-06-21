@@ -179,6 +179,22 @@ npm run typecheck  # zero erros de tipo
 
 **Objetivo**: simulação de batalha em TypeScript puro, 100% testável, sem React.
 
+### Decisões fechadas para a simulação
+
+- Empates de `speed`, seleção de habilidade e seleção de alvo usam o RNG determinístico da batalha.
+- A ordem de ação é calculada no início de cada rodada; alterações de `speed` valem a partir da rodada seguinte.
+- Buffs e debuffs usam `amount` como proporção do atributo atual (`0.1` = 10%).
+- Uma habilidade causa seu dano base e depois aplica seu efeito opcional.
+- Recompensas de entrada são copiadas para o resultado uma única vez e somente quando o jogador vence.
+
+### Adendo visual do protótipo
+
+- O motor continua sem interface; o refinamento visual é uma camada transversal separada.
+- Imagens de referência de terceiros podem ser usadas somente no ambiente local de desenvolvimento.
+- Essas imagens ficam em `public/local-prototype/`, ignoradas pelo Git e substituídas automaticamente pelo placeholder original quando ausentes.
+- Nenhum nome, imagem ou terminologia de terceiros pode entrar no build de produção ou no repositório.
+- Direção visual: painel idle de alta densidade inspirado em interfaces do gênero, com identidade própria de caderno de guilda.
+
 ### Tarefas
 
 - [ ] Implementar `src/simulation/battle/`:
@@ -368,3 +384,5 @@ Antes de instalar qualquer pacote novo:
 | vitest           | latest | Testes unitários rápidos com Vite     |
 | @playwright/test | latest | Testes E2E e de interface             |
 | prettier         | latest | Formatação consistente do código      |
+| @fontsource-variable/fraunces | latest | Fonte display OFL empacotada localmente para a identidade do protótipo |
+| @fontsource-variable/manrope | latest | Fonte de interface OFL legível em painéis densos e offline |
