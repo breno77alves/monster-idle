@@ -114,15 +114,15 @@ src/
 
 ### Tarefas
 
-- [ ] Configurar estrutura de diretórios conforme `ARCHITECTURE.md`
-- [ ] Configurar roteamento (React Router ou similar) entre:
+- [x] Configurar estrutura de diretórios conforme `ARCHITECTURE.md`
+- [x] Configurar roteamento (React Router ou similar) entre:
   - Home, Coleção, Time, Atividades, Expedições, Ovos
-- [ ] Configurar Zustand com store vazio inicial
-- [ ] Configurar Vitest com `vitest.config.ts`
-- [ ] Configurar Playwright com `playwright.config.ts`
-- [ ] Configurar ESLint + Prettier
-- [ ] Criar tela placeholder para cada aba
-- [ ] Testar navegação com Playwright
+- [x] Configurar Zustand com store vazio inicial
+- [x] Configurar Vitest com `vitest.config.ts`
+- [x] Configurar Playwright com `playwright.config.ts`
+- [x] Configurar ESLint + Prettier
+- [x] Criar tela placeholder para cada aba
+- [x] Testar navegação com Playwright
 
 ### NÃO fazer neste milestone
 
@@ -367,3 +367,4 @@ Antes de instalar qualquer pacote novo:
 | dexie            | latest | Abstração de IndexedDB tipada         |
 | vitest           | latest | Testes unitários rápidos com Vite     |
 | @playwright/test | latest | Testes E2E e de interface             |
+| prettier         | latest | Formatação consistente do código      |
