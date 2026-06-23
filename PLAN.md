@@ -238,6 +238,7 @@ npm run typecheck  # zero erros
 
 ### Tarefas
 
+- [x] Criar scripts Windows para iniciar a aplicação e encerrar com segurança apenas o servidor iniciado pelo projeto
 - [ ] Criar componente `BattleScreen` em `src/features/combat/`
 - [ ] Exibir: times, barras de vida, rodada atual, ação atual, battle log
 - [ ] Controle de velocidade da simulação (1×, 2×, Skip)
