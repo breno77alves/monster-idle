@@ -25,4 +25,11 @@ describe('createBattlePresentation', () => {
       { itemId: 'fragmento-de-pedra', quantity: 2 },
     ])
   })
+
+  it('formats damage in the visible log without floating-point artifacts', () => {
+    const presentation = createBattlePresentation(demoBattleInput)
+    const visibleLog = presentation.frames.at(-1)?.visibleLog.join('\n') ?? ''
+
+    expect(visibleLog).not.toMatch(/\.\d{3,}/)
+  })
 })

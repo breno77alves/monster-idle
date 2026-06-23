@@ -27,6 +27,21 @@ export interface BattlePresentation {
   readonly result: BattleResult
 }
 
+const damageFormatter = new Intl.NumberFormat('pt-BR', {
+  maximumFractionDigits: 2,
+})
+
+function describeAction(action: BattleAction, input: BattleInput) {
+  const combatUnits = [...input.playerTeam, ...input.enemyTeam]
+  const actor = combatUnits.find((unit) => unit.id === action.actorId)
+  const target = combatUnits.find((unit) => unit.id === action.targetId)
+  const ability = actor?.abilities.find(
+    (candidate) => candidate.id === action.abilityId,
+  )
+
+  return `${actor?.name ?? action.actorId} usou ${ability?.name ?? action.abilityId} em ${target?.name ?? action.targetId} e causou ${damageFormatter.format(action.damage)} de dano.`
+}
+
 export function createBattlePresentation(
   input: BattleInput,
 ): BattlePresentation {
@@ -57,18 +72,13 @@ export function createBattlePresentation(
       isComplete: false,
     },
   ]
-  let logIndex = 0
 
   for (const round of result.rounds) {
-    const roundHeader = result.log[logIndex]
-    if (roundHeader) visibleLog.push(roundHeader)
-    logIndex += 1
+    visibleLog.push(`Rodada ${round.number}`)
 
     for (const action of round.actions) {
       healthByUnitId[action.targetId] = action.targetHealth
-      const actionLog = result.log[logIndex]
-      if (actionLog) visibleLog.push(actionLog)
-      logIndex += 1
+      visibleLog.push(describeAction(action, input))
 
       frames.push({
         roundNumber: round.number,
