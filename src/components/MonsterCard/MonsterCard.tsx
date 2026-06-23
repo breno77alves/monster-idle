@@ -4,6 +4,7 @@ import type {
   MonsterStats,
   MonsterType,
 } from '../../domain/monster-types'
+import { MonsterPortrait } from '../MonsterPortrait/MonsterPortrait'
 
 interface MonsterCardProps {
   readonly species: MonsterSpecies
@@ -41,8 +42,8 @@ export function MonsterCard({ species, catalogNumber }: MonsterCardProps) {
         <span className="catalog-number">
           #{catalogNumber.toString().padStart(2, '0')}
         </span>
-        <img
-          src={species.portraitPath}
+        <MonsterPortrait
+          species={species}
           alt={`Retrato provisório de ${species.name}`}
         />
       </div>
