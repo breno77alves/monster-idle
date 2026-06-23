@@ -1,18 +1,18 @@
 :root {
-  --ink-strong: #172821;
-  --ink: #405249;
-  --ink-muted: #718078;
-  --paper: #f4f0e4;
-  --paper-light: #fbf8ee;
-  --paper-deep: #e6dfcb;
-  --moss: #173f35;
-  --moss-light: #285c4d;
-  --moss-soft: #d9e5d7;
-  --signal: #df6b3f;
-  --signal-soft: #f5d7c8;
-  --line: rgba(23, 63, 53, 0.18);
-  --font-display: Georgia, 'Times New Roman', serif;
-  --font-body: Candara, 'Trebuchet MS', sans-serif;
+  --ink-strong: #172033;
+  --ink: #3e4a5e;
+  --ink-muted: #738095;
+  --paper: #e9edf3;
+  --paper-light: #ffffff;
+  --paper-deep: #d8dee8;
+  --moss: #101a2b;
+  --moss-light: #1d2c45;
+  --moss-soft: #dce7e2;
+  --signal: #c9792f;
+  --signal-soft: #f4dfc4;
+  --line: rgba(23, 32, 51, 0.14);
+  --font-display: 'Fraunces Variable', Georgia, serif;
+  --font-body: 'Manrope Variable', 'Segoe UI', sans-serif;
 
   color: var(--ink);
   background: var(--paper);
@@ -39,14 +39,14 @@ body {
   margin: 0;
   background:
     radial-gradient(
-      circle at 82% 12%,
-      rgba(223, 107, 63, 0.08),
-      transparent 24rem
+      circle at 82% 5%,
+      rgba(201, 121, 47, 0.1),
+      transparent 28rem
     ),
     repeating-linear-gradient(
-      94deg,
-      transparent 0 7rem,
-      rgba(23, 63, 53, 0.018) 7rem 7.05rem
+      90deg,
+      transparent 0 5rem,
+      rgba(23, 32, 51, 0.022) 5rem 5.05rem
     ),
     var(--paper);
 }

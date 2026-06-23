@@ -91,19 +91,45 @@ export function App() {
         <div className="sidebar-note">
           <span className="status-dot" aria-hidden="true" />
           <span>
-            <strong>Estrutura pronta</strong>
-            <small>Milestone 1 · sem gameplay</small>
+            <strong>Motor em teste</strong>
+            <small>Milestone 3 · protótipo local</small>
           </span>
         </div>
       </aside>
 
       <main className="main-column">
         <header className="topbar">
-          <span className="mobile-brand">Monster Idle</span>
-          <p>
-            <span aria-hidden="true">⌁</span> Acampamento base
-          </p>
-          <span className="prototype-badge">Protótipo</span>
+          <div className="topbar-location">
+            <span className="mobile-brand">Monster Idle</span>
+            <p>
+              <span aria-hidden="true">⌁</span> Acampamento base
+            </p>
+          </div>
+
+          <ul className="resource-strip" aria-label="Recursos do treinador">
+            <li>
+              <span className="resource-glyph" aria-hidden="true">
+                ◈
+              </span>
+              <span>
+                <small>Moedas</small>
+                <strong>0</strong>
+              </span>
+            </li>
+            <li>
+              <span className="resource-glyph" aria-hidden="true">
+                ◆
+              </span>
+              <span>
+                <small>Fragmentos</small>
+                <strong>0</strong>
+              </span>
+            </li>
+            <li className="trainer-level">
+              <small>Treinador</small>
+              <strong>NV 1</strong>
+            </li>
+          </ul>
         </header>
         <div className="page-container">
           <Screen />
