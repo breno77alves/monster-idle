@@ -82,6 +82,9 @@ export function HomeScreen() {
             <span>Requisito</span>
             <strong>Time com 1 criatura</strong>
           </div>
+          <a className="panel-action" href="/battle/demo">
+            Testar confronto <span aria-hidden="true">→</span>
+          </a>
         </article>
 
         <article className="dashboard-panel companion-panel">

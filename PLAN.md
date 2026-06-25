@@ -238,12 +238,13 @@ npm run typecheck  # zero erros
 
 ### Tarefas
 
-- [ ] Criar componente `BattleScreen` em `src/features/combat/`
-- [ ] Exibir: times, barras de vida, rodada atual, ação atual, battle log
-- [ ] Controle de velocidade da simulação (1×, 2×, Skip)
-- [ ] Exibir resultado (vitória/derrota + recompensas)
-- [ ] Nenhuma lógica de gameplay dentro de componentes React
-- [ ] Testes Playwright: fluxo completo de batalha (início → resultado)
+- [x] Criar scripts Windows para iniciar a aplicação e encerrar com segurança apenas o servidor iniciado pelo projeto
+- [x] Criar componente `BattleScreen` em `src/features/combat/`
+- [x] Exibir: times, barras de vida, rodada atual, ação atual, battle log
+- [x] Controle de velocidade da simulação (1×, 2×, Skip)
+- [x] Exibir resultado (vitória/derrota + recompensas)
+- [x] Nenhuma lógica de gameplay dentro de componentes React
+- [x] Testes Playwright: fluxo completo de batalha (início → resultado)
 
 ### Verificação
 

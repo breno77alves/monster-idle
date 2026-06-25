@@ -44,3 +44,7 @@ Thumbs.db
 /Shiny/
 /UI/
 /public/local-prototype/
+
+# Local development launcher state
+.monster-idle.pid
+.monster-idle-server.*.log

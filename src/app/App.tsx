@@ -2,6 +2,7 @@ import type { ComponentType, MouseEvent } from 'react'
 import { AppIcon } from '../components/AppIcon/AppIcon'
 import { ActivitiesScreen } from '../features/activities/ActivitiesScreen'
 import { CollectionScreen } from '../features/collection/CollectionScreen'
+import { BattleScreen } from '../features/combat/BattleScreen'
 import { EggsScreen } from '../features/eggs/EggsScreen'
 import { ExpeditionsScreen } from '../features/expeditions/ExpeditionsScreen'
 import { HomeScreen } from '../features/home/HomeScreen'
@@ -18,6 +19,7 @@ const screens: Record<AppRoutePath, ComponentType> = {
   '/activities': ActivitiesScreen,
   '/expeditions': ExpeditionsScreen,
   '/eggs': EggsScreen,
+  '/battle/demo': BattleScreen,
 }
 
 interface NavigationLinkProps {
@@ -91,8 +93,8 @@ export function App() {
         <div className="sidebar-note">
           <span className="status-dot" aria-hidden="true" />
           <span>
-            <strong>Motor em teste</strong>
-            <small>Milestone 3 · protótipo local</small>
+            <strong>Arena em teste</strong>
+            <small>Milestone 4 · protótipo local</small>
           </span>
         </div>
       </aside>
